@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visit Cappadocia</title>
+    <style>
+      .box {
+        display: center;
+        margin: 0 auto;
+        padding: 10px 20px;
+        width: 85%;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        background-image: linear-gradient(
+          179.4deg,
+          rgb(253, 240, 233) 2.2%,
+          rgb(255, 194, 203) 96.2%
+        );
+      }
+      h1 {
+        text-align: center;
+        font-size: 50px;
+        color: #fe7e8c;
+        font-family: fantasy;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+        width: 50%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 10px;
+        color: #fe7e8c;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: arial;
+      }
+      a {
+        font-size: 20px;
+        color: #fe7e8c;
+      }
+      button {
+        display: block;
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 25px;
+        border-radius: 10px;
+        border: bisque;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+        background-color: #fe7dac;
+        color: bisque;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      .author {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 10px 30px 10px;
+      }
+      .link {
+        font-family: cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Cappadocia 🌄</h1>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/612/original/cappadocia4.jpeg?1697317829"
+        alt="Cappadocia"
+      />
+      <h2>A Fairytale Vacation</h2>
+      <p>
+        <strong>Cappadocia</strong> is a touristic location where exceptional
+        natural wonders exsist. There are fairy chimneys and a unique historical
+        and cultural heritage. Hot-air ballooning is very popular in Cappadocia
+        and is available in <em>Goreme</em>. Trekking is enjoyed in
+        <em>Ihlara Valley</em>. You can even stay in cave hotels and wake up to
+        beautiful views of hot-air ballooons floating in the sky.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Cappadocia" target="_blank">
+        <span class="link">More Information about Cappadocia</span>
+      </a>
+      <br />
+      <button>Book Ticket Today</button>
+      <br />
+      <p class="author">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/dilarainal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          target="_blank"
+        >
+          <span class="link"> Dilara Inal</span>
+        </a>
+      </p>
+    </div>
+    <script>
+      function ticket() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let discount = prompt(
+          "Are you interested in discounted tickets to Cappadocia?"
+        );
+
+        discount = discount.toLowerCase().trim();
+
+        if (discount === "yes") {
+          alert(
+            "Hello, " + name + "! You can find your discount in your email! 😎"
+          );
+        } else {
+          alert(
+            "Hello, " +
+              name +
+              "! You're missing out on an amazing adventure! ☹️"
+          );
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", ticket);
+    </script>
+  </body>
+</html>
